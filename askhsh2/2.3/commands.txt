@@ -1,0 +1,3 @@
+gcc -Wall -c strcat.s strcpy.s strlen.s strcmp.s
+
+
