@@ -1,7 +1,7 @@
 #include <stdio.h>
-
+#define STR_SZ 33
 int main() {
-    char str[33];
+    char str[STR_SZ];
 
     while(1) {
     
