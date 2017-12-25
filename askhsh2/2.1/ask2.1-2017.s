@@ -80,7 +80,7 @@ exit:
 
 .data
 	string: .ascii "Input a string up to 32 chars long: \0"
-	input: .ascii "%s\0"
+	input: .ascii "%[^\n]s\0"
 	str: .ascii "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
 	len = . - str
 	output_str: .ascii "%s\n\0"
