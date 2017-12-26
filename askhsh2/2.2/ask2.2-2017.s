@@ -28,7 +28,7 @@ main:
 	beq exit
 	cmp r3, #113
 	beq exit 	@ if 'q' or 'Q' and length 1, exit
-
+	
 
 @ 2.2 starts
 @ ldr r4, =frequency @r4 points at start of frequency array
@@ -53,29 +53,32 @@ done:
 ldr r4, =frequency @r4 points at start of frequency array
 ldr r10, =str @ r4 still points at start of frequency array 
 ldrb r1, [r10]
+mov r14, #0
 @ r7 has string length
 print_loop:
 	ldr r4, =frequency @r4 points at start of frequency array
 	ldr r0, =output_msg @ output message format
 	
 	sub r3, r1, #33 @ indexing in frequency array
-	add r4, r4, r3
-	ldr r2, [r4]	 
+	@add r4, r4, r3
+	ldrb r2, [r4, r3]
+	push {r3, r4, r7, r14}
 	cmp r2, #0	@ if frequency[r3] == 0, don't print.
 	blne printf
-	mov r2, #0
-	strb r2, [r4]
+	pop {r3, r4, r7, r14}
+	strb r14, [r4, r3]
 
-@ next byte(char) in str 
+@ next byte(char) in str
 	ldrb r1, [r10, #1]!
 	subs r7, r7, #1
 	bne print_loop
-	pop {ip, pc} 
+	
+	pop {ip, pc}
 
 exit:
 	ldr r0, =exit_str
 	bl printf
-	pop {ip, pc} 
+	pop {ip, pc}
 
 .data
 	string: 
@@ -84,19 +87,16 @@ exit:
 		.ascii "%[^\n]s\0"
 	str: 
 		.ascii "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-
 	len = . - str
-
 	output_str: 
 		.ascii "%s\n\0"
 	output_msg: 
-		.ascii "%c -> %d\n\0"
+		.ascii "%c -> %ld\n\0"
 	output_int: 
-		.ascii "%d\n"
+		.ascii "%d\n\0"
 	exit_str: 
 		.ascii "Exiting.\n\0"
-@ byte addressing logic
-	.balign 4
-    	frequency: 
-		.skip 94
+	frequency:
+		.ascii "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+		
 .end
