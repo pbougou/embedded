@@ -4,6 +4,8 @@
 .extern scanf
 .extern strlen
 .extern snprintf
+.extern strcpy
+.extern memset
 
 main:
 	push {ip, lr}
@@ -14,19 +16,29 @@ main:
 	mov r7, #5
 	swi 0
 	@ r0 has file descriptor
-	push { r0 }
+	mov r6, r0
+again:
+	push { r6 }
 	
 	ldr r0, =string
 	bl printf
+
+@ Initialize frequency array
+	ldr r0, =frequency
+	mov r1, #0
+	ldr r2, =freqlen
+	bl memset
+
 	ldr r0, =input
 	ldr r1, =str
 	bl scanf
+	bl getchar    @ clear input stream
+
 	ldr r0, =str
 	bl strlen  
 	cmp r0, #33
 	movgt r0, #33 @ r0 has length of input string 
 	mov r7, r0    @ store it in r7
-	push {r7}
 
 	ldr r10, =str
 	ldrb r3, [r10] @ load first char of string in r10
@@ -42,7 +54,7 @@ main:
 @ 2.2 starts
 ldr r4, =frequency @r4 points at start of frequency array
 loop:
-	ldr r4, =frequency @r4 points at start of frequency array
+	ldr r4, =frequency 
 	cmp r3, #32
 	ble done
 	cmp r3, #126
@@ -84,11 +96,13 @@ print_loop:
 	subs r7, r7, #1
 	bne print_loop
 */
-pop { r7 } 
-pop { r0 }
+
+pop { r6 }
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ Don' t use r0... It has fd for write@
+@ Don' t use r6... It has fd for write@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 ldr r8, =frequency @ r8 points at start of frequency array
 ldr r10, =str      @ r10 points at start of str
 ldrb r3, [r10]     @ character for pretty printing
@@ -111,31 +125,56 @@ write_loop:
 	ldr r0, =buffer    
 	ldr r1, =BUFLEN
 	ldr r2, =format_msg
-@ r3 has the ascii for character to be printed	
-	push { r0, r7, r8, r10, r14 }
+@ r3 has the ascii for character to be printed
+	push { r6, r7, r8, r10, r14 }
+	push { r4 }	
 	bl snprintf		 @ buffer created. Now write it to file
-	pop { r0, r7, r8, r10, r14 }
+	pop { r4 }
+	pop { r6, r7, r8, r10, r14 }
+
 
 @ write system call (#4):
-	mov r0, #1
+	mov r0, r6
 	ldr r1, =buffer
 	ldr r2, =BUFLEN
-	push { r0, r7 }
+	push { r6, r7, r10, r14 }
 	mov r7, #4 		 @ write system call
 	swi 0
-	pop { r0, r7 }
+	pop  { r6, r7, r10, r14 }
 
 @ next byte(char) in str
 next:
 	ldrb r3, [r10, #1]!
 	subs r7, r7, #1
 	bne write_loop
+@ newline between outputs of different inputs	
+	mov r0, r6
+	ldr r1, =newline
+	ldr r2, =newline_len
+	mov r7, #4
+	push { r6 }
+	swi 0
+	pop { r6 }	
 
+	b again
 	pop {ip, pc}
 
 exit:
-	ldr r0, =exit_str
-	bl printf
+	mov r0, r6
+	ldr r1, =exit_str
+	ldr r2, =exit_str_len
+	mov r7, #4
+	swi 0
+
+	/***************** 
+	 * close fd here *  
+	 *****************/
+	mov r0, r6
+	mov r7, #6
+	swi 0
+	
+	pop { r6 }
+
 	pop {ip, pc}
 
 .data
@@ -147,22 +186,26 @@ exit:
 		.ascii "%[^\n]s\0"
 	str: 
 		.ascii "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+	len = . - str
 	buffer: 
-		.ascii "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+		.ascii "\0\0\0\0\0\0\0\0\0"
 	BUFLEN = . - buffer
 	output_str: 
 		.ascii "%s\n\0"
 	output_msg: 
 		.ascii "%c -> %ld\n\0"
 	format_msg: 
-		.ascii "%c -> %d\n\0"
+		.ascii "%c -> %ld\n\0"
 	output_int: 
 		.ascii "%d\n\0"
 	exit_str: 
-		.ascii "Exiting.\n\0"
+		.ascii "Exiting...\n\0"
+	exit_str_len = . - exit_str
 	frequency:
 		.ascii "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-	trans:
-		.ascii " -> "
-		
+	freqlen = . - frequency
+	newline: 
+		.ascii "\n\0"
+	newline_len = . - newline
+
 .end

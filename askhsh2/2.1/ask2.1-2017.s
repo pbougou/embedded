@@ -3,15 +3,19 @@
 .extern printf
 .extern scanf
 .extern strlen
-
+.extern getchar
 
 main:
 	push {ip, lr} 
+again:
 	ldr r0, =string
 	bl printf
+
 	ldr r0, =input
 	ldr r1, =str
 	bl scanf
+	bl getchar
+
 	ldr r0, =str
 	bl strlen  
 	cmp r0, #33
@@ -70,6 +74,8 @@ done:
 	ldr r0, =output_int
 @	ldr r1, =len
 @	bl printf
+
+	bal again
 	pop {ip, pc} 
 
 exit:
