@@ -1,11 +1,13 @@
 .text
-.global main
+.align 4
+.global transform
+.type transform,%function
+
 .extern printf
 .extern scanf
 .extern strlen
 .extern getchar
-.extern transform
-
+/*
 main:
 	push {ip, lr} 
 again:
@@ -26,13 +28,15 @@ again:
 	ldrb r3, [r10]
 
 	cmp r0, #1
-	blne transform
+	bne main_loop
 	cmp r3, #81
 	beq exit
 	cmp r3, #113
 	beq exit
-/*
-main_loop:
+*/
+transform:
+	push {ip, lr} 
+transform_loop:
 	cmp r3, #47
 	ble done
 	cmp r3, #57
@@ -64,9 +68,10 @@ done:
 	strb r3, [r10]
 	ldrb r3, [r10, #1]!
 	subs r0, r0, #1
-	bne main_loop
-*/	
+	bne transform_loop
 	
+	pop {ip, pc} 
+/*	
 
 
 	ldr r0, =output_str
@@ -82,6 +87,7 @@ done:
 exit:
 	ldr r0, =exit_str
 	bl printf
+	add r0,r0,r0
 	pop {ip, pc} 
 
 .data
@@ -93,3 +99,4 @@ exit:
 	output_int: .ascii "%d\n\0"
 	exit_str: .ascii "Exiting.\n\0"
 .end
+*/
