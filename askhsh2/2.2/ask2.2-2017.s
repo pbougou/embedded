@@ -12,7 +12,8 @@ main:
 
 	@ Open file
 	ldr r0, =filename
-	movw r1, #65 @ #1092 @ O_RDWR | O_CREAT | O_APPEND
+	movw r1, #65 
+			@ #1092 @ O_RDWR | O_CREAT | O_APPEND
 	mov r7, #5
 	swi 0
 	@ r0 has file descriptor
@@ -43,111 +44,30 @@ again:
 	ldr r10, =str
 	ldrb r3, [r10] @ load first char of string in r10
 
+	@ Transform calling conventions:
+	@       address of buffer : r0
+	@       buffer length     : r1
+	@       format msg        : r2
+	@ 	first byte of str : r3
+	@	file desriptor    : r6
+	@       length str        : r7
+	@ 	frequency address : r8
+	@ 	str address	  : r10
+
+	
+	ldr r9, =frequency
+	pop { r6 }
+
 	cmp r0, #1
-	bne loop
+	bne transform_label
 	cmp r3, #81
 	beq exit
 	cmp r3, #113
 	beq exit 	@ if 'q' or 'Q' and length 1, exit
 	
-
-@ 2.2 starts
-ldr r4, =frequency @r4 points at start of frequency array
-loop:
-	ldr r4, =frequency 
-	cmp r3, #32
-	ble done
-	cmp r3, #126
-	bgt done
-	sub r3, r3, #33
-	add r4, r4, r3
-	ldrb r5, [r4]
-	add r5,r5,#1
-	strb r5, [r4]
+transform_label:
+	bl transform
 	
-done:
-	ldrb r3, [r10, #1]!
-	subs r0, r0, #1
-	bne loop
-
-
-
-/*
-ldr r4, =frequency @r4 points at start of frequency array
-ldr r10, =str @ r4 still points at start of frequency array 
-ldrb r1, [r10]
-mov r14, #0
-@ r7 has string length
-print_loop:
-	@ldr r4, =frequency @r4 points at start of frequency array
-	ldr r0, =output_msg @ output message format
-	
-	sub r3, r1, #33 @ indexing in frequency array
-	@add r4, r4, r3
-	ldrb r2, [r4, r3]
-	push {r3, r4, r7, r14}
-	cmp r2, #0	@ if frequency[r3] == 0, don't print.
-	blne printf
-	pop {r3, r4, r7, r14}
-	strb r14, [r4, r3]
-
-@ next byte(char) in str
-	ldrb r1, [r10, #1]!
-	subs r7, r7, #1
-	bne print_loop
-*/
-
-pop { r6 }
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ Don' t use r6... It has fd for write@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-ldr r8, =frequency @ r8 points at start of frequency array
-ldr r10, =str      @ r10 points at start of str
-ldrb r3, [r10]     @ character for pretty printing
-mov r14, #0	   @ always zero
- 
-write_loop:
-@ r3 has the ascii 
-@ r4 has the frequency for this ascii
-	ldr r8, =frequency 	 @ r8 points at start of frequency array
-	sub r5, r3, #33          @ indexing in frequency array
-	add r8, r8, r5		 @ address of desired character in r8
-	ldrb r4, [r8]	 	 @ frequency of current character
-
-	cmp r4, #0		 @ if character at r3(ascii) has frequency 
-				 @ equal to #0, don't print.
-	beq next
-				 @ else ...
-	strb r14, [r8]	 	 @ make zero the frequency, 
-				 @ so as not to print again
-	ldr r0, =buffer    
-	ldr r1, =BUFLEN
-	ldr r2, =format_msg
-@ r3 has the ascii for character to be printed
-	push { r6, r7, r8, r10, r14 }
-	push { r4 }	
-	bl snprintf		 @ buffer created. Now write it to file
-	pop { r4 }
-	pop { r6, r7, r8, r10, r14 }
-
-
-@ write system call (#4):
-	mov r0, r6
-	ldr r1, =buffer
-	ldr r2, =BUFLEN
-	push { r6, r7, r10, r14 }
-	mov r7, #4 		 @ write system call
-	swi 0
-	pop  { r6, r7, r10, r14 }
-
-@ next byte(char) in str
-next:
-	ldrb r3, [r10, #1]!
-	subs r7, r7, #1
-	bne write_loop
-@ newline between outputs of different inputs	
 	mov r0, r6
 	ldr r1, =newline
 	ldr r2, =newline_len
@@ -155,10 +75,8 @@ next:
 	push { r6 }
 	swi 0
 	pop { r6 }	
-
+	
 	b again
-	pop {ip, pc}
-
 exit:
 	mov r0, r6
 	ldr r1, =exit_str
@@ -173,9 +91,10 @@ exit:
 	mov r7, #6
 	swi 0
 	
-	pop { r6 }
+@	pop { r6 }
 
 	pop {ip, pc}
+
 
 .data
 	filename:
@@ -209,3 +128,32 @@ exit:
 	newline_len = . - newline
 
 .end
+
+/**************************************************************************** 
+ *	Print loop with c library
+ ****************************************************************************
+ *	ldr r4, =frequency @r4 points at start of frequency array
+ *	ldr r10, =str @ r4 still points at start of frequency array 
+ *	ldrb r1, [r10]
+ *	mov r14, #0
+ *	@ r7 has string length
+ *	print_loop:
+ *		@ldr r4, =frequency @r4 points at start of frequency array
+ *		ldr r0, =output_msg @ output message format
+ *		
+ *		sub r3, r1, #33 @ indexing in frequency array
+ *		@add r4, r4, r3
+ *		ldrb r2, [r4, r3]
+ *		push {r3, r4, r7, r14}
+ *		cmp r2, #0	@ if frequency[r3] == 0, don't print.
+ *		blne printf
+ *		pop {r3, r4, r7, r14}
+ *		strb r14, [r4, r3]
+ *
+ *	@ next byte(char) in str
+ *		ldrb r1, [r10, #1]!
+ *		subs r7, r7, #1
+ *		bne print_loop
+ ****************************************************************************/
+
+
