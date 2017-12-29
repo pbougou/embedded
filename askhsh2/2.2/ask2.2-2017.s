@@ -51,7 +51,7 @@ again:
 	@ 	first byte of str : r3
 	@	file desriptor    : r6
 	@       length str        : r7
-	@ 	frequency address : r8
+	@ 	frequency address : r9
 	@ 	str address	  : r10
 
 	
