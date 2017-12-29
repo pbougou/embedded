@@ -71,13 +71,13 @@ write_loop:
 
 
 	@ write system call (#4):
-	push { r0, r1, r2, r6, r7, r10, r14 }
+	push { r0, r1, r2, r6, r7, r9, r10, r14 }
 	mov r0, r6
 	ldr r1, =buffer
 	ldr r2, =BUFLEN
 	mov r7, #4 		 @ write system call
 	swi 0
-	pop  { r0, r1, r2, r6, r7, r10, r14 }
+	pop  { r0, r1, r2, r6, r7, r9, r10, r14 }
 
 @ next byte(char) in str
 next:
@@ -93,65 +93,3 @@ pop { ip, pc }
         BUFLEN = . - buffer
         format_msg: 
                 .ascii "%c -> %ld\n\0"
-
-/*
-pop { r6 }
-
-
-ldr r8, =frequency @ r8 points at start of frequency array
-ldr r10, =str      @ r10 points at start of str
-ldrb r3, [r10]     @ character for pretty printing
-mov r14, #0	   @ always zero
- 
-write_loop:
-@ r3 has the ascii 
-@ r4 has the frequency for this ascii
-	ldr r8, =frequency 	 @ r8 points at start of frequency array
-	sub r5, r3, #33          @ indexing in frequency array
-	add r8, r8, r5		 @ address of desired character in r8
-	ldrb r4, [r8]	 	 @ frequency of current character
-
-	cmp r4, #0		 @ if character at r3(ascii) has frequency 
-				 @ equal to #0, don't print.
-	beq next
-				 @ else ...
-	strb r14, [r8]	 	 @ make zero the frequency, 
-				 @ so as not to print again
-	ldr r0, =buffer    
-	ldr r1, =BUFLEN
-	ldr r2, =format_msg
-@ r3 has the ascii for character to be printed
-	push { r6, r7, r8, r10, r14 }
-	push { r4 }	
-	bl snprintf		 @ buffer created. Now write it to file
-	pop { r4 }
-	pop { r6, r7, r8, r10, r14 }
-
-
-@ write system call (#4):
-	mov r0, r6
-	ldr r1, =buffer
-	ldr r2, =BUFLEN
-	push { r6, r7, r10, r14 }
-	mov r7, #4 		 @ write system call
-	swi 0
-	pop  { r6, r7, r10, r14 }
-
-@ next byte(char) in str
-next:
-	ldrb r3, [r10, #1]!
-	subs r7, r7, #1
-	bne write_loop
-@ newline between outputs of different inputs	
-	mov r0, r6
-	ldr r1, =newline
-	ldr r2, =newline_len
-	mov r7, #4
-	push { r6 }
-	swi 0
-	pop { r6 }	
-
-	b again
-	pop {ip, pc}
-*/
-
