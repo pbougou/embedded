@@ -1,0 +1,356 @@
+--------------------------------------------------------------------------------
+Command:            ./dijkstra input.dat
+Massif arguments:   (none)
+ms_print arguments: massif.out.26128
+--------------------------------------------------------------------------------
+
+
+    KB
+590.4^                                                                       :
+     |                                                                   ::@:#
+     |                                                               @  :: @:#
+     |                                                               @:::: @:#
+     |                                                            :@@@: :: @:#
+     |                                                         :@@:@ @: :: @:#
+     |                                                     :::::@ :@ @: :: @:#
+     |                                                  :::: : :@ :@ @: :: @:#
+     |                                              @::::::: : :@ :@ @: :: @:#
+     |                                           @::@:: :::: : :@ :@ @: :: @:#
+     |                                     :::@@:@::@:: :::: : :@ :@ @: :: @:#
+     |                                  @@:: :@ :@::@:: :::: : :@ :@ @: :: @:#
+     |                                 :@ :: :@ :@::@:: :::: : :@ :@ @: :: @:#
+     |                             ::@@:@ :: :@ :@::@:: :::: : :@ :@ @: :: @:#
+     |                         @:@@::@ :@ :: :@ :@::@:: :::: : :@ :@ @: :: @:#
+     |                       :@@:@ ::@ :@ :: :@ :@::@:: :::: : :@ :@ @: :: @:#
+     |                    ::::@@:@ ::@ :@ :: :@ :@::@:: :::: : :@ :@ @: :: @:#
+     |                ::::: ::@@:@ ::@ :@ :: :@ :@::@:: :::: : :@ :@ @: :: @:#
+     |             :::::: : ::@@:@ ::@ :@ :: :@ :@::@:: :::: : :@ :@ @: :: @:#
+     |           :::: ::: : ::@@:@ ::@ :@ :: :@ :@::@:: :::: : :@ :@ @: :: @:#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   62.51
+
+Number of snapshots: 63
+ Detailed snapshots: [15, 16, 18, 21, 23, 27, 29, 32, 41, 43, 44, 48, 57, 60 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        176,511            4,944            4,888            56            0
+  2      7,377,445            4,984            4,912            72            0
+  3      8,340,314           26,984           18,112         8,872            0
+  4      9,199,303           30,224           20,056        10,168            0
+  5     10,513,959           38,424           24,976        13,448            0
+  6     12,063,785           64,456           41,000        23,456            0
+  7     13,048,052           69,616           44,096        25,520            0
+  8     14,588,453           95,336           59,528        35,808            0
+  9     15,510,224           97,136           60,608        36,528            0
+ 10     17,211,883          107,296           66,704        40,592            0
+ 11     18,275,648          130,296           80,504        49,792            0
+ 12     19,079,090          131,576           81,272        50,304            0
+ 13     20,100,584          136,976           84,512        52,464            0
+ 14     21,401,821          158,896           97,664        61,232            0
+ 15     22,415,901          164,536          101,048        63,488            0
+61.41% (101,048B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->57.03% (93,840B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->57.03% (93,840B) 0x4011EA: main (dijkstra.c:170)
+|   
+->03.11% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.11% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->02.49% (4,096B) 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+|   | ->02.49% (4,096B) 0x50D7C80: _IO_default_uflow (genops.c:413)
+|   |   ->02.49% (4,096B) 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+|   |     ->02.49% (4,096B) 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->02.49% (4,096B) 0x401163: main (dijkstra.c:162)
+|   |         
+|   ->00.62% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.27% (2,088B) in 5 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 16     23,191,128          188,696          115,544        73,152            0
+61.23% (115,544B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->54.74% (103,296B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->54.74% (103,296B) 0x4011EA: main (dijkstra.c:170)
+|   
+->03.29% (6,216B) 0x40257A: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+| ->03.29% (6,216B) 0x401001: dijkstra (dijkstra.c:117)
+| | ->03.29% (6,216B) 0x4011EA: main (dijkstra.c:170)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.71% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.71% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->02.17% (4,096B) 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+|   | ->02.17% (4,096B) 0x50D7C80: _IO_default_uflow (genops.c:413)
+|   |   ->02.17% (4,096B) 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+|   |     ->02.17% (4,096B) 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->02.17% (4,096B) 0x401163: main (dijkstra.c:162)
+|   |         
+|   ->00.54% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.48% (912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 17     24,339,997          189,216          115,856        73,360            0
+ 18     25,052,578          190,736          116,768        73,968            0
+61.22% (116,768B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->57.58% (109,824B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->57.58% (109,824B) 0x4011EA: main (dijkstra.c:170)
+|   
+->02.68% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.68% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->02.15% (4,096B) 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+|   | ->02.15% (4,096B) 0x50D7C80: _IO_default_uflow (genops.c:413)
+|   |   ->02.15% (4,096B) 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+|   |     ->02.15% (4,096B) 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->02.15% (4,096B) 0x401163: main (dijkstra.c:162)
+|   |         
+|   ->00.54% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.96% (1,824B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 19     26,528,422          217,296          132,704        84,592            0
+ 20     27,417,948          219,776          134,192        85,584            0
+ 21     28,623,602          232,136          141,608        90,528            0
+61.00% (141,608B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->57.35% (133,128B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->57.35% (133,128B) 0x4011EA: main (dijkstra.c:170)
+|   
+->02.21% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.21% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->01.76% (4,096B) 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+|   | ->01.76% (4,096B) 0x50D7C80: _IO_default_uflow (genops.c:413)
+|   |   ->01.76% (4,096B) 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+|   |     ->01.76% (4,096B) 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.76% (4,096B) 0x401163: main (dijkstra.c:162)
+|   |         
+|   ->00.44% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.03% (2,400B) 0x40257A: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+| ->01.02% (2,376B) 0x401001: dijkstra (dijkstra.c:117)
+| | ->01.02% (2,376B) 0x4011EA: main (dijkstra.c:170)
+| |   
+| ->00.01% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.41% (960B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 22     30,307,651          247,216          150,656        96,560            0
+ 23     31,423,708          272,856          166,040       106,816            0
+60.85% (166,040B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->56.39% (153,864B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->56.39% (153,864B) 0x4011EA: main (dijkstra.c:170)
+|   
+->02.23% (6,072B) 0x40257A: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+| ->02.23% (6,072B) 0x401001: dijkstra (dijkstra.c:117)
+| | ->02.23% (6,072B) 0x4011EA: main (dijkstra.c:170)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.88% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.88% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->01.50% (4,096B) 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+|   | ->01.50% (4,096B) 0x50D7C80: _IO_default_uflow (genops.c:413)
+|   |   ->01.50% (4,096B) 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+|   |     ->01.50% (4,096B) 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.50% (4,096B) 0x401163: main (dijkstra.c:162)
+|   |         
+|   ->00.38% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.36% (984B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 24     33,172,196          274,656          167,120       107,536            0
+ 25     34,235,122          302,296          183,704       118,592            0
+ 26     35,662,086          302,376          183,752       118,624            0
+ 27     36,819,923          331,096          200,984       130,112            0
+60.70% (200,984B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->56.76% (187,920B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->56.76% (187,920B) 0x4011EA: main (dijkstra.c:170)
+|   
+->02.09% (6,912B) 0x40257A: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+| ->02.09% (6,912B) 0x401001: dijkstra (dijkstra.c:117)
+| | ->02.09% (6,912B) 0x4011EA: main (dijkstra.c:170)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.55% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.55% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->01.24% (4,096B) 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+|   | ->01.24% (4,096B) 0x50D7C80: _IO_default_uflow (genops.c:413)
+|   |   ->01.24% (4,096B) 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+|   |     ->01.24% (4,096B) 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.24% (4,096B) 0x401163: main (dijkstra.c:162)
+|   |         
+|   ->00.31% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.31% (1,032B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 28     38,243,639          329,856          200,240       129,616            0
+ 29     39,390,935          355,256          215,480       139,776            0
+60.65% (215,480B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->57.17% (203,112B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->57.17% (203,112B) 0x4011EA: main (dijkstra.c:170)
+|   
+->01.74% (6,192B) 0x40257A: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+| ->01.74% (6,192B) 0x401001: dijkstra (dijkstra.c:117)
+| | ->01.74% (6,192B) 0x4011EA: main (dijkstra.c:170)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.44% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.44% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->01.15% (4,096B) 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+|   | ->01.15% (4,096B) 0x50D7C80: _IO_default_uflow (genops.c:413)
+|   |   ->01.15% (4,096B) 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+|   |     ->01.15% (4,096B) 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.15% (4,096B) 0x401163: main (dijkstra.c:162)
+|   |         
+|   ->00.29% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.30% (1,056B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 30     40,464,904          357,496          216,824       140,672            0
+ 31     41,353,455          358,576          217,472       141,104            0
+ 32     42,270,910          381,816          231,416       150,400            0
+60.61% (231,416B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->57.61% (219,960B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->57.61% (219,960B) 0x4011EA: main (dijkstra.c:170)
+|   
+->01.38% (5,256B) 0x40257A: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+| ->01.38% (5,256B) 0x401001: dijkstra (dijkstra.c:117)
+| | ->01.38% (5,256B) 0x4011EA: main (dijkstra.c:170)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.34% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.34% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->01.07% (4,096B) 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+|   | ->01.07% (4,096B) 0x50D7C80: _IO_default_uflow (genops.c:413)
+|   |   ->01.07% (4,096B) 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+|   |     ->01.07% (4,096B) 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.07% (4,096B) 0x401163: main (dijkstra.c:162)
+|   |         
+|   ->00.27% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.28% (1,080B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33     43,480,482          389,896          236,264       153,632            0
+ 34     44,550,372          392,056          237,560       154,496            0
+ 35     45,706,246          421,936          255,488       166,448            0
+ 36     46,949,192          420,896          254,864       166,032            0
+ 37     47,658,779          422,376          255,752       166,624            0
+ 38     48,699,304          447,456          270,800       176,656            0
+ 39     50,297,192          452,136          273,608       178,528            0
+ 40     52,026,177          478,576          289,472       189,104            0
+ 41     53,268,070          480,096          290,384       189,712            0
+60.48% (290,384B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->59.03% (283,416B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->59.03% (283,416B) 0x4011EA: main (dijkstra.c:170)
+|   
+->01.07% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.07% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->01.07% (5,120B) in 2 places, all below massif's threshold (1.00%)
+|     
+->00.38% (1,848B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 42     54,967,861          509,296          307,904       201,392            0
+ 43     55,988,987          511,616          309,296       202,320            0
+60.45% (309,296B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->58.87% (301,200B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->58.87% (301,200B) 0x4011EA: main (dijkstra.c:170)
+|   
+->01.00% (5,120B) 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.00% (5,120B) 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+|   ->01.00% (5,120B) in 2 places, all below massif's threshold (1.00%)
+|     
+->00.58% (2,976B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 44     57,611,953          544,256          328,880       215,376            0
+60.43% (328,880B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->58.03% (315,816B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->58.03% (315,816B) 0x4011EA: main (dijkstra.c:170)
+|   
+->01.24% (6,744B) 0x40257A: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+| ->01.24% (6,744B) 0x401001: dijkstra (dijkstra.c:117)
+| | ->01.24% (6,744B) 0x4011EA: main (dijkstra.c:170)
+| |   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.16% (6,320B) in 5 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 45     59,035,618          542,656          327,920       214,736            0
+ 46     60,104,893          549,376          331,952       217,424            0
+ 47     61,526,544          574,736          347,168       227,568            0
+ 48     63,051,656          597,456          360,800       236,656            0
+60.39% (360,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->58.34% (348,528B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->58.34% (348,528B) 0x4011EA: main (dijkstra.c:170)
+|   
+->02.05% (12,272B) in 6 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 49     63,406,827          600,536          362,648       237,888            0
+ 50     63,584,146          599,016          361,736       237,280            0
+ 51     63,761,446          598,976          361,712       237,264            0
+ 52     63,940,998          598,336          361,328       237,008            0
+ 53     64,119,110          598,616          361,496       237,120            0
+ 54     64,297,406          600,456          362,600       237,856            0
+ 55     64,474,459          599,896          362,264       237,632            0
+ 56     64,652,265          600,936          362,888       238,048            0
+ 57     64,829,287          601,816          363,416       238,400            0
+60.39% (363,416B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->59.07% (355,464B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->59.07% (355,464B) 0x4011EA: main (dijkstra.c:170)
+|   
+->01.32% (7,952B) in 6 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 58     65,006,587          601,776          363,392       238,384            0
+ 59     65,183,462          603,056          364,160       238,896            0
+ 60     65,192,432          603,656          364,520       239,136            0
+60.39% (364,520B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->59.16% (357,144B) 0x400FA3: dijkstra (dijkstra.c:112)
+| ->59.16% (357,144B) 0x4011EA: main (dijkstra.c:170)
+|   
+->01.22% (7,376B) in 6 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61     65,369,697          603,896          364,664       239,232            0
+ 62     65,547,529          604,576          365,072       239,504            0

@@ -1,0 +1,782 @@
+desc: (none)
+cmd: ./dijkstra input.dat
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=178759
+mem_heap_B=4856
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=7379693
+mem_heap_B=4880
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=8793138
+mem_heap_B=19248
+mem_heap_extra_B=9248
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=10054111
+mem_heap_B=22816
+mem_heap_extra_B=11920
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=10962122
+mem_heap_B=33464
+mem_heap_extra_B=18064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=11896055
+mem_heap_B=40304
+mem_heap_extra_B=22552
+mem_stacks_B=0
+heap_tree=detailed
+n4: 40304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 31704 0x401173: dijkstra (dijkstra.c:112)
+  n0: 31704 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n1: 1024 0x50D6D36: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:812)
+    n1: 1024 0x50D53BB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1323)
+     n1: 1024 0x50A599D: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x50AEE34: printf (printf.c:33)
+       n1: 1024 0x401228: dijkstra (dijkstra.c:124)
+        n0: 1024 0x4013BA: main (dijkstra.c:170)
+ n2: 2688 0x40150C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+  n1: 2688 0x4011D1: dijkstra (dijkstra.c:117)
+   n0: 2688 0x4013BA: main (dijkstra.c:170)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 792 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=12832606
+mem_heap_B=43528
+mem_heap_extra_B=24880
+mem_stacks_B=0
+heap_tree=detailed
+n4: 43528 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 36000 0x401173: dijkstra (dijkstra.c:112)
+  n0: 36000 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n1: 1024 0x50D6D36: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:812)
+    n1: 1024 0x50D53BB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1323)
+     n1: 1024 0x50A599D: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x50AEE34: printf (printf.c:33)
+       n1: 1024 0x401228: dijkstra (dijkstra.c:124)
+        n0: 1024 0x4013BA: main (dijkstra.c:170)
+ n2: 1616 0x40150C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+  n1: 1616 0x4011D1: dijkstra (dijkstra.c:117)
+   n0: 1616 0x4013BA: main (dijkstra.c:170)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 792 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=13654965
+mem_heap_B=44896
+mem_heap_extra_B=26048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=14940920
+mem_heap_B=58520
+mem_heap_extra_B=34736
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=15927451
+mem_heap_B=61616
+mem_heap_extra_B=37008
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=17283725
+mem_heap_B=70896
+mem_heap_extra_B=43128
+mem_stacks_B=0
+heap_tree=detailed
+n4: 70896 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 63336 0x401173: dijkstra (dijkstra.c:112)
+  n0: 63336 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 1600 0x40150C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+  n1: 1584 0x4011D1: dijkstra (dijkstra.c:117)
+   n0: 1584 0x4013BA: main (dijkstra.c:170)
+  n0: 16 in 1 place, below massif's threshold (1.00%)
+ n0: 840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=18364393
+mem_heap_B=79344
+mem_heap_extra_B=48640
+mem_stacks_B=0
+heap_tree=detailed
+n4: 79344 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 71064 0x401173: dijkstra (dijkstra.c:112)
+  n0: 71064 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2320 0x40150C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+  n1: 2320 0x4011D1: dijkstra (dijkstra.c:117)
+   n0: 2320 0x4013BA: main (dijkstra.c:170)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=19770849
+mem_heap_B=83184
+mem_heap_extra_B=51536
+mem_stacks_B=0
+heap_tree=detailed
+n3: 83184 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 76920 0x401173: dijkstra (dijkstra.c:112)
+  n0: 76920 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 1144 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=20811403
+mem_heap_B=96424
+mem_heap_extra_B=59896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=21912916
+mem_heap_B=99264
+mem_heap_extra_B=62064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=23456705
+mem_heap_B=114736
+mem_heap_extra_B=71968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=24807468
+mem_heap_B=115688
+mem_heap_extra_B=73112
+mem_stacks_B=0
+heap_tree=detailed
+n3: 115688 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 108816 0x401173: dijkstra (dijkstra.c:112)
+  n0: 108816 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 1752 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=26441451
+mem_heap_B=131360
+mem_heap_extra_B=83176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=27880030
+mem_heap_B=134120
+mem_heap_extra_B=85440
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=29072939
+mem_heap_B=149160
+mem_heap_extra_B=94936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=30625774
+mem_heap_B=150784
+mem_heap_extra_B=96568
+mem_stacks_B=0
+heap_tree=detailed
+n3: 150784 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 144216 0x401173: dijkstra (dijkstra.c:112)
+  n0: 144216 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 1448 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=31784886
+mem_heap_B=164800
+mem_heap_extra_B=105440
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=33147454
+mem_heap_B=166904
+mem_heap_extra_B=107280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=34094301
+mem_heap_B=182024
+mem_heap_extra_B=116720
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=35429986
+mem_heap_B=182944
+mem_heap_extra_B=117840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=36643943
+mem_heap_B=196712
+mem_heap_extra_B=126584
+mem_stacks_B=0
+heap_tree=detailed
+n4: 196712 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 186456 0x401173: dijkstra (dijkstra.c:112)
+  n0: 186456 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 4128 0x40150C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+  n1: 4128 0x4011D1: dijkstra (dijkstra.c:117)
+   n0: 4128 0x4013BA: main (dijkstra.c:170)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1008 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=37714703
+mem_heap_B=199384
+mem_heap_extra_B=128640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=38590222
+mem_heap_B=200528
+mem_heap_extra_B=129696
+mem_stacks_B=0
+heap_tree=detailed
+n3: 200528 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 193680 0x401173: dijkstra (dijkstra.c:112)
+  n0: 193680 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 1728 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=39586344
+mem_heap_B=213880
+mem_heap_extra_B=138104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=40498077
+mem_heap_B=215504
+mem_heap_extra_B=139464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=41818531
+mem_heap_B=219392
+mem_heap_extra_B=142352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=42664700
+mem_heap_B=234064
+mem_heap_extra_B=151480
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=44294517
+mem_heap_B=236072
+mem_heap_extra_B=153376
+mem_stacks_B=0
+heap_tree=detailed
+n3: 236072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 229080 0x401173: dijkstra (dijkstra.c:112)
+  n0: 229080 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x50D6A52: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:548)
+    n1: 4096 0x50D7C80: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x50B5840: _IO_vfscanf (vfscanf.c:631)
+      n1: 4096 0x50C5F54: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n0: 4096 0x401333: main (dijkstra.c:162)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 1872 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=45500075
+mem_heap_B=252912
+mem_heap_extra_B=163952
+mem_stacks_B=0
+heap_tree=detailed
+n4: 252912 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 241992 0x401173: dijkstra (dijkstra.c:112)
+  n0: 241992 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n0: 5120 in 2 places, all below massif's threshold (1.00%)
+ n2: 4720 0x40150C: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/arm/askisi3/dijsktra/dijkstra)
+  n1: 4720 0x4011D1: dijkstra (dijkstra.c:117)
+   n0: 4720 0x4013BA: main (dijkstra.c:170)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1080 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=46403672
+mem_heap_B=254392
+mem_heap_extra_B=165224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=47400699
+mem_heap_B=255088
+mem_heap_extra_B=166064
+mem_stacks_B=0
+heap_tree=detailed
+n3: 255088 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 248136 0x401173: dijkstra (dijkstra.c:112)
+  n0: 248136 0x4013BA: main (dijkstra.c:170)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n0: 5120 in 2 places, all below massif's threshold (1.00%)
+ n0: 1832 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=48772023
+mem_heap_B=268528
+mem_heap_extra_B=174680
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=49620690
+mem_heap_B=270464
+mem_heap_extra_B=176200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=51067530
+mem_heap_B=276216
+mem_heap_extra_B=180256
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=52456975
+mem_heap_B=290008
+mem_heap_extra_B=189088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=53752774
+mem_heap_B=302488
+mem_heap_extra_B=197096
+mem_stacks_B=0
+heap_tree=detailed
+n3: 302488 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 292056 0x401173: dijkstra (dijkstra.c:112)
+  n0: 292056 0x4013BA: main (dijkstra.c:170)
+ n0: 5312 in 5 places, all below massif's threshold (1.00%)
+ n1: 5120 0x50C7E0A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x50D7BC4: _IO_doallocbuf (genops.c:398)
+   n0: 5120 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=54474440
+mem_heap_B=303576
+mem_heap_extra_B=198056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=55567641
+mem_heap_B=307760
+mem_heap_extra_B=201024
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=56859979
+mem_heap_B=312216
+mem_heap_extra_B=204240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=58005114
+mem_heap_B=326008
+mem_heap_extra_B=212968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=58730400
+mem_heap_B=326896
+mem_heap_extra_B=213808
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=59779933
+mem_heap_B=330776
+mem_heap_extra_B=216576
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=61196584
+mem_heap_B=344296
+mem_heap_extra_B=225256
+mem_stacks_B=0
+heap_tree=detailed
+n2: 344296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 335544 0x401173: dijkstra (dijkstra.c:112)
+  n0: 335544 0x4013BA: main (dijkstra.c:170)
+ n0: 8752 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=61915624
+mem_heap_B=346856
+mem_heap_extra_B=227096
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=62097816
+mem_heap_B=346808
+mem_heap_extra_B=227144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=62278056
+mem_heap_B=347240
+mem_heap_extra_B=227480
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=62456867
+mem_heap_B=347368
+mem_heap_extra_B=227632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=62502844
+mem_heap_B=347592
+mem_heap_extra_B=227784
+mem_stacks_B=0
+heap_tree=detailed
+n2: 347592 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 340824 0x401173: dijkstra (dijkstra.c:112)
+  n0: 340824 0x4013BA: main (dijkstra.c:170)
+ n0: 6768 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=62681855
+mem_heap_B=347768
+mem_heap_extra_B=227968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=62833581
+mem_heap_B=352392
+mem_heap_extra_B=230792
+mem_stacks_B=0
+heap_tree=detailed
+n2: 352392 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 344448 0x401173: dijkstra (dijkstra.c:112)
+  n0: 344448 0x4013BA: main (dijkstra.c:170)
+ n0: 7944 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=62884831
+mem_heap_B=356664
+mem_heap_extra_B=233368
+mem_stacks_B=0
+heap_tree=detailed
+n2: 356664 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 347088 0x401173: dijkstra (dijkstra.c:112)
+  n0: 347088 0x4013BA: main (dijkstra.c:170)
+ n0: 9576 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=63038045
+mem_heap_B=360328
+mem_heap_extra_B=235624
+mem_stacks_B=0
+heap_tree=detailed
+n2: 360328 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 349632 0x401173: dijkstra (dijkstra.c:112)
+  n0: 349632 0x4013BA: main (dijkstra.c:170)
+ n0: 10696 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=63217102
+mem_heap_B=360880
+mem_heap_extra_B=236032
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=63398325
+mem_heap_B=360376
+mem_heap_extra_B=235808
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=63577544
+mem_heap_B=360032
+mem_heap_extra_B=235680
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=63756901
+mem_heap_B=360400
+mem_heap_extra_B=235976
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=63936954
+mem_heap_B=360112
+mem_heap_extra_B=235880
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=64117603
+mem_heap_B=361000
+mem_heap_extra_B=236488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=64299534
+mem_heap_B=361392
+mem_heap_extra_B=236800
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=64478790
+mem_heap_B=362000
+mem_heap_extra_B=237240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=64658201
+mem_heap_B=362808
+mem_heap_extra_B=237800
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=64837302
+mem_heap_B=363216
+mem_heap_extra_B=238120
+mem_stacks_B=0
+heap_tree=detailed
+n2: 363216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 355944 0x401173: dijkstra (dijkstra.c:112)
+  n0: 355944 0x4013BA: main (dijkstra.c:170)
+ n0: 7272 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=65018039
+mem_heap_B=363368
+mem_heap_extra_B=238288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=65045719
+mem_heap_B=363672
+mem_heap_extra_B=238480
+mem_stacks_B=0
+heap_tree=peak
+n2: 363672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 356736 0x401173: dijkstra (dijkstra.c:112)
+  n0: 356736 0x4013BA: main (dijkstra.c:170)
+ n0: 6936 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=65226169
+mem_heap_B=364504
+mem_heap_extra_B=239056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=65407105
+mem_heap_B=364696
+mem_heap_extra_B=239248
+mem_stacks_B=0
+heap_tree=empty
