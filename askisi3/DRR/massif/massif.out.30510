@@ -1,0 +1,685 @@
+desc: (none)
+cmd: ./drr
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=168026
+mem_heap_B=24
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=238574
+mem_heap_B=2004
+mem_heap_extra_B=580
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=293493
+mem_heap_B=4192
+mem_heap_extra_B=688
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=359620
+mem_heap_B=8080
+mem_heap_extra_B=1208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=426109
+mem_heap_B=11600
+mem_heap_extra_B=1752
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=515017
+mem_heap_B=15256
+mem_heap_extra_B=2536
+mem_stacks_B=0
+heap_tree=detailed
+n5: 15256 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 12096 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 12096 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 12096 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 12096 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 1512 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 1512 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 1248 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 1136 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 1136 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 112 in 1 place, below massif's threshold (1.00%)
+ n1: 240 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 240 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 160 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=569329
+mem_heap_B=17856
+mem_heap_extra_B=2792
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=636399
+mem_heap_B=19280
+mem_heap_extra_B=3656
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=722614
+mem_heap_B=19900
+mem_heap_extra_B=3860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=820958
+mem_heap_B=22168
+mem_heap_extra_B=4280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=937360
+mem_heap_B=23200
+mem_heap_extra_B=4904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1011949
+mem_heap_B=24236
+mem_heap_extra_B=5404
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1094988
+mem_heap_B=24612
+mem_heap_extra_B=5532
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=1177661
+mem_heap_B=25684
+mem_heap_extra_B=5700
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1247585
+mem_heap_B=28108
+mem_heap_extra_B=6092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1355238
+mem_heap_B=32968
+mem_heap_extra_B=7160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1446863
+mem_heap_B=35236
+mem_heap_extra_B=7172
+mem_stacks_B=0
+heap_tree=detailed
+n5: 35236 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 26880 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 26880 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 26880 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 26880 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 3360 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3360 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 2436 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 2436 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 2400 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 2192 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 2192 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 208 in 1 place, below massif's threshold (1.00%)
+ n0: 160 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=1494413
+mem_heap_B=36776
+mem_heap_extra_B=7480
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1576359
+mem_heap_B=44112
+mem_heap_extra_B=12736
+mem_stacks_B=0
+heap_tree=detailed
+n5: 44112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 28032 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 28032 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 28032 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 28032 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 6752 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 6544 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 6544 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 208 in 1 place, below massif's threshold (1.00%)
+ n1: 5664 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 5664 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 3504 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3504 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 160 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=1632820
+mem_heap_B=47380
+mem_heap_extra_B=14940
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1704126
+mem_heap_B=53036
+mem_heap_extra_B=18980
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1782290
+mem_heap_B=56836
+mem_heap_extra_B=21764
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1853198
+mem_heap_B=63220
+mem_heap_extra_B=26340
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1924106
+mem_heap_B=69604
+mem_heap_extra_B=30900
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1970835
+mem_heap_B=73764
+mem_heap_extra_B=33868
+mem_stacks_B=0
+heap_tree=detailed
+n5: 73764 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 28224 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 28224 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 28224 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 28224 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 23424 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 23232 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 23232 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 18444 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 18444 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 3528 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3528 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 144 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=2042112
+mem_heap_B=77044
+mem_heap_extra_B=36300
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=2113418
+mem_heap_B=82700
+mem_heap_extra_B=40340
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=2166923
+mem_heap_B=86944
+mem_heap_extra_B=43368
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=2240648
+mem_heap_B=90912
+mem_heap_extra_B=46288
+mem_stacks_B=0
+heap_tree=detailed
+n5: 90912 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 32880 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 32688 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 32688 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 28224 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 28224 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 28224 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 28224 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 26136 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 26136 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 3528 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3528 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 144 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=2294131
+mem_heap_B=87488
+mem_heap_extra_B=44120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=2365303
+mem_heap_B=82736
+mem_heap_extra_B=41096
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=2436475
+mem_heap_B=77984
+mem_heap_extra_B=38072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=2547846
+mem_heap_B=70548
+mem_heap_extra_B=33340
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=2663830
+mem_heap_B=62804
+mem_heap_extra_B=28412
+mem_stacks_B=0
+heap_tree=detailed
+n5: 62804 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 28224 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 28224 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 28224 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 28224 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 18492 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 18492 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 12416 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 12224 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 12224 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 3528 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3528 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 144 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=2779814
+mem_heap_B=55060
+mem_heap_extra_B=23484
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=2866802
+mem_heap_B=49252
+mem_heap_extra_B=19788
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=2941643
+mem_heap_B=48900
+mem_heap_extra_B=19540
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=3056985
+mem_heap_B=55468
+mem_heap_extra_B=22356
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=3114877
+mem_heap_B=60060
+mem_heap_extra_B=25636
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=3230078
+mem_heap_B=67584
+mem_heap_extra_B=31096
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=3316634
+mem_heap_B=72616
+mem_heap_extra_B=34776
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=3374526
+mem_heap_B=77208
+mem_heap_extra_B=38056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=3489777
+mem_heap_B=84716
+mem_heap_extra_B=43524
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=3576200
+mem_heap_B=89904
+mem_heap_extra_B=47312
+mem_stacks_B=0
+heap_tree=detailed
+n5: 89904 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 31512 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 31512 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 30912 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 30912 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 30912 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 30912 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 23472 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 23280 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 23280 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 3864 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3864 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 144 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=3633735
+mem_heap_B=95084
+mem_heap_extra_B=51012
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=3735662
+mem_heap_B=104212
+mem_heap_extra_B=57532
+mem_stacks_B=0
+heap_tree=detailed
+n5: 104212 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 37644 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 37644 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 31648 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 31456 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 31456 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 30912 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 30912 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 30912 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 30912 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 3864 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3864 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 144 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=3796033
+mem_heap_B=106584
+mem_heap_extra_B=59312
+mem_stacks_B=0
+heap_tree=peak
+n5: 106584 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 38832 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 38832 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 32832 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 32640 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 32640 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 30912 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 30912 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 30912 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 30912 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 3864 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3864 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 144 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=3853696
+mem_heap_B=103540
+mem_heap_extra_B=57412
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=3940625
+mem_heap_B=97988
+mem_heap_extra_B=53892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=3987414
+mem_heap_B=94864
+mem_heap_extra_B=51904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=4034253
+mem_heap_B=91828
+mem_heap_extra_B=49972
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=4080998
+mem_heap_B=89088
+mem_heap_extra_B=48232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=4127909
+mem_heap_B=86208
+mem_heap_extra_B=46408
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=4174704
+mem_heap_B=83556
+mem_heap_extra_B=44740
+mem_stacks_B=0
+heap_tree=detailed
+n5: 83556 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32748 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 32748 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 30912 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 30912 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 30912 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 30912 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 15888 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 15696 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 15696 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 3864 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3864 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n0: 144 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=4221493
+mem_heap_B=80432
+mem_heap_extra_B=42752
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=4268440
+mem_heap_B=79200
+mem_heap_extra_B=41776
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=4315187
+mem_heap_B=75996
+mem_heap_extra_B=39484
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=4361973
+mem_heap_B=73968
+mem_heap_extra_B=37936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=4408875
+mem_heap_B=70508
+mem_heap_extra_B=35468
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=4455842
+mem_heap_B=72264
+mem_heap_extra_B=36592
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=4502722
+mem_heap_B=68960
+mem_heap_extra_B=34232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=4549573
+mem_heap_B=65964
+mem_heap_extra_B=32092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=4596405
+mem_heap_B=63868
+mem_heap_extra_B=30348
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=4666287
+mem_heap_B=62680
+mem_heap_extra_B=29520
+mem_stacks_B=0
+heap_tree=detailed
+n5: 62680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 31872 0x40119F: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 31872 0x4012A7: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n1: 31872 0x400F0B: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+    n0: 31872 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 24024 0x400DF3: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 24024 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n1: 3984 0x400ED2: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 3984 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+ n2: 2656 0x4012C6: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n1: 2448 0x400FBC: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+   n0: 2448 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+  n0: 208 in 1 place, below massif's threshold (1.00%)
+ n0: 144 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=65
+#-----------
+time=4713123
+mem_heap_B=64100
+mem_heap_extra_B=29732
+mem_stacks_B=0
+heap_tree=empty

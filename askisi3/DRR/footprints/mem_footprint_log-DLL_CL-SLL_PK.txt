@@ -1,0 +1,397 @@
+--------------------------------------------------------------------------------
+Command:            ./drr
+Massif arguments:   (none)
+ms_print arguments: massif.out.20166
+--------------------------------------------------------------------------------
+
+
+    KB
+168.5^                                                         ##             
+     |                                                        @# :            
+     |                                                       :@# ::           
+     |                                                       :@# ::::         
+     |                                  @@                  ::@# :::          
+     |                                 @@ :                :::@# ::: :        
+     |                               ::@@ ::               :::@# ::: ::::     
+     |                              :: @@ :::            :::::@# ::: :: @:    
+     |                              :: @@ ::::          :: :::@# ::: :: @:::: 
+     |                            :::: @@ :::::        ::: :::@# ::: :: @::: :
+     |                           @: :: @@ :::::::    ::::: :::@# ::: :: @::: :
+     |                           @: :: @@ ::::::    :: ::: :::@# ::: :: @::: :
+     |                         ::@: :: @@ :::::: ::::: ::: :::@# ::: :: @::: :
+     |                        :: @: :: @@ :::::: :: :: ::: :::@# ::: :: @::: :
+     |                        :: @: :: @@ :::::: :: :: ::: :::@# ::: :: @::: :
+     |                     ::::: @: :: @@ :::::: :: :: ::: :::@# ::: :: @::: :
+     |             @@ @:@@::: :: @: :: @@ :::::: :: :: ::: :::@# ::: :: @::: :
+     |          :::@ :@:@ ::: :: @: :: @@ :::::: :: :: ::: :::@# ::: :: @::: :
+     |       @@::: @ :@:@ ::: :: @: :: @@ :::::: :: :: ::: :::@# ::: :: @::: :
+     |      :@ ::: @ :@:@ ::: :: @: :: @@ :::::: :: :: ::: :::@# ::: :: @::: :
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   4.401
+
+Number of snapshots: 55
+ Detailed snapshots: [3, 5, 9, 11, 13, 19, 23, 24, 41, 42 (peak), 49]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        169,902               40               24            16            0
+  2        248,737            3,008            2,456           552            0
+  3        305,182            6,968            5,772         1,196            0
+82.84% (5,772B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->57.86% (4,032B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->57.86% (4,032B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->57.86% (4,032B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->57.86% (4,032B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->07.23% (504B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->07.23% (504B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->07.23% (504B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->07.23% (504B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->07.23% (504B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->05.28% (368B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->04.59% (320B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->04.59% (320B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.69% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.10% (216B) 0x402716: cdsl_deque_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->03.10% (216B) 0x402820: cdsl_dll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->03.10% (216B) 0x400C80: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->01.21% (84B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->01.21% (84B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->00.92% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4        385,782           13,144           10,948         2,196            0
+  5        500,307           19,688           16,320         3,368            0
+82.89% (16,320B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->59.49% (11,712B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->59.49% (11,712B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->59.49% (11,712B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->59.49% (11,712B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->07.44% (1,464B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->07.44% (1,464B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->07.44% (1,464B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->07.44% (1,464B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->07.44% (1,464B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->06.01% (1,184B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->05.44% (1,072B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->05.44% (1,072B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.57% (112B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.10% (216B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->01.10% (216B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->01.10% (216B) 0x402716: cdsl_deque_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->01.10% (216B) 0x402820: cdsl_dll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->01.10% (216B) 0x400C80: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.33% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  6        581,590           24,768           20,364         4,404            0
+  7        695,401           27,200           21,968         5,232            0
+  8        750,314           28,096           22,612         5,484            0
+  9        863,379           35,440           27,604         7,836            0
+77.89% (27,604B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.76% (17,280B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->48.76% (17,280B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->48.76% (17,280B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->48.76% (17,280B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->09.35% (3,312B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->08.98% (3,184B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->08.98% (3,184B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.36% (128B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->06.81% (2,412B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.81% (2,412B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->06.09% (2,160B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.09% (2,160B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->06.09% (2,160B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.09% (2,160B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->06.09% (2,160B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.79% (280B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 10        967,853           33,600           26,576         7,024            0
+ 11      1,056,331           36,744           28,648         8,096            0
+77.97% (28,648B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->49.64% (18,240B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->49.64% (18,240B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->49.64% (18,240B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->49.64% (18,240B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->07.84% (2,880B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->07.49% (2,752B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->07.49% (2,752B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.35% (128B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->07.32% (2,688B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->07.32% (2,688B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->06.21% (2,280B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.21% (2,280B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->06.21% (2,280B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.21% (2,280B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->06.21% (2,280B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.76% (280B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 12      1,121,062           36,304           28,452         7,852            0
+ 13      1,217,494           39,144           30,932         8,212            0
+79.02% (30,932B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->52.97% (20,736B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->52.97% (20,736B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->52.97% (20,736B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->52.97% (20,736B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->06.77% (2,652B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.77% (2,652B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->06.62% (2,592B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.62% (2,592B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->06.62% (2,592B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.62% (2,592B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->06.62% (2,592B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->05.31% (2,080B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->04.95% (1,936B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->04.95% (1,936B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.37% (144B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.72% (280B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 14      1,288,048           42,800           34,164         8,636            0
+ 15      1,388,188           45,152           36,244         8,908            0
+ 16      1,461,991           49,296           39,680         9,616            0
+ 17      1,563,892           62,448           47,588        14,860            0
+ 18      1,659,372           75,888           55,428        20,460            0
+ 19      1,733,884           86,304           61,504        24,800            0
+71.26% (61,504B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.70% (28,224B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->32.70% (28,224B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->32.70% (28,224B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->32.70% (28,224B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->16.74% (14,448B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->16.50% (14,240B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->16.50% (14,240B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.24% (208B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->13.32% (11,496B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->13.32% (11,496B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->04.09% (3,528B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->04.09% (3,528B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->04.09% (3,528B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->04.09% (3,528B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->04.09% (3,528B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.32% (280B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 20      1,829,498           97,176           67,796        29,380            0
+ 21      1,952,860          112,320           76,580        35,740            0
+ 22      2,025,152          122,496           82,516        39,980            0
+ 23      2,115,517          135,216           89,936        45,280            0
+66.51% (89,936B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.46% (30,368B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->22.32% (30,176B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->22.32% (30,176B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.14% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->20.87% (28,224B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->20.87% (28,224B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->20.87% (28,224B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->20.87% (28,224B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->17.77% (24,024B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->17.77% (24,024B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->02.61% (3,528B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->02.61% (3,528B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->02.61% (3,528B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->02.61% (3,528B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->02.61% (3,528B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.20% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 24      2,196,144          143,352           94,632        48,720            0
+66.01% (94,632B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.94% (32,880B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->22.80% (32,688B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->22.80% (32,688B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.13% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->19.69% (28,224B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->19.69% (28,224B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->19.69% (28,224B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->19.69% (28,224B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->18.28% (26,208B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->18.28% (26,208B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->02.46% (3,528B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->02.46% (3,528B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->02.46% (3,528B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->02.46% (3,528B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->02.46% (3,528B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.18% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 25      2,321,868          129,480           86,148        43,332            0
+ 26      2,393,660          121,416           81,220        40,196            0
+ 27      2,465,452          113,352           76,292        37,060            0
+ 28      2,537,244          105,288           71,364        33,924            0
+ 29      2,609,036           97,224           66,436        30,788            0
+ 30      2,680,828           89,160           61,508        27,652            0
+ 31      2,788,516           77,064           54,116        22,948            0
+ 32      2,879,835           74,592           52,620        21,972            0
+ 33      2,967,229           80,888           57,396        23,492            0
+ 34      3,025,540           89,096           62,184        26,912            0
+ 35      3,142,138          102,392           69,888        32,504            0
+ 36      3,229,359          112,112           75,512        36,600            0
+ 37      3,287,677          120,080           80,156        39,924            0
+ 38      3,404,121          133,496           87,932        45,564            0
+ 39      3,462,407          140,480           91,980        48,500            0
+ 40      3,578,727          156,800          101,476        55,324            0
+ 41      3,636,903          166,016          106,852        59,164            0
+64.36% (106,852B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.36% (37,116B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->22.36% (37,116B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->18.62% (30,912B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->18.62% (30,912B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->18.62% (30,912B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->18.62% (30,912B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->18.57% (30,832B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->18.46% (30,640B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->18.46% (30,640B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.12% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.33% (3,864B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->02.33% (3,864B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->02.33% (3,864B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->02.33% (3,864B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->02.33% (3,864B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.16% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 42      3,711,141          172,592          110,640        61,952            0
+64.10% (110,640B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.54% (38,904B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->22.54% (38,904B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->19.02% (32,832B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->18.91% (32,640B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->18.91% (32,640B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.11% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->17.91% (30,912B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->17.91% (30,912B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->17.91% (30,912B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->17.91% (30,912B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->02.24% (3,864B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->02.24% (3,864B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->02.24% (3,864B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->02.24% (3,864B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->02.24% (3,864B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.15% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43      3,798,603          164,120          105,440        58,680            0
+ 44      3,856,873          158,000          101,692        56,308            0
+ 45      3,944,326          148,712           96,008        52,704            0
+ 46      4,060,968          136,736           88,672        48,064            0
+ 47      4,148,436          129,272           84,112        45,160            0
+ 48      4,235,845          122,008           80,012        41,996            0
+ 49      4,294,085          114,496           75,620        38,876            0
+66.05% (75,620B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->27.33% (31,296B) 0x4011C2: cdsl_queue_list_lock_based_pthread_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->27.33% (31,296B) 0x4012CA: cdsl_sll_init (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->27.33% (31,296B) 0x400F1D: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     ->27.33% (31,296B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|       
+->24.54% (28,092B) 0x400DFC: get_next_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->24.54% (28,092B) 0x400CCE: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->07.11% (8,144B) 0x4012E9: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->06.95% (7,952B) 0x400FCE: insert_packet (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| | ->06.95% (7,952B) 0x400CFC: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| |   
+| ->00.17% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.42% (3,912B) 0x400EE4: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->03.42% (3,912B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   
+->03.42% (3,912B) 0x403A7C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+| ->03.42% (3,912B) 0x400F45: find_node (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|   ->03.42% (3,912B) 0x400CE5: main (in /home/panagiotis/Documents/courses/embedded/ddr_exercise_3/ddtr_exercise/DRR/drr)
+|     
+->00.23% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50      4,349,070          116,216           76,700        39,516            0
+ 51      4,403,987          109,352           72,696        36,656            0
+ 52      4,458,952          103,776           69,516        34,260            0
+ 53      4,559,552           99,112           66,856        32,256            0
+ 54      4,614,601          101,128           68,504        32,624            0
