@@ -31,50 +31,13 @@ again:
 	beq exit
 	cmp r3, #113
 	beq exit
-/*
-main_loop:
-	cmp r3, #47
-	ble done
-	cmp r3, #57
-	ble number
-	cmp r3, #64
-	ble done
-	cmp r3, #90
-	ble upper
-	cmp r3, #96
-	ble done
-	cmp r3, #122
-	ble lower
-	bal done
 
-number:
-	cmp r3, #52
-	addle r3, r3, #5
-	subgt r3, r3, #5
-	bal done
-
-upper:
-	add r3, r3, #32
-	bal done
-	
-lower:
-	sub r3, #32
-	
-done:
-	strb r3, [r10]
-	ldrb r3, [r10, #1]!
-	subs r0, r0, #1
-	bne main_loop
-*/	
-	
 
 
 	ldr r0, =output_str
 	ldr r1, =str
 	bl printf
 	ldr r0, =output_int
-@	ldr r1, =len
-@	bl printf
 
 	bal again
 	pop {ip, pc} 
