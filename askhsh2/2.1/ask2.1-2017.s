@@ -31,6 +31,7 @@ again:
 	beq exit
 	cmp r3, #113
 	beq exit
+<<<<<<< Updated upstream
 
 
 
@@ -38,6 +39,12 @@ again:
 	ldr r1, =str
 	bl printf
 	ldr r0, =output_int
+=======
+	
+    ldr r0, =output_str
+	ldr r1, =str
+	bl printf
+>>>>>>> Stashed changes
 
 	bal again
 	pop {ip, pc} 
