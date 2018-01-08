@@ -98,7 +98,7 @@ exit:
 
 .data
 	filename:
-		.ascii "outfile\0"
+		.ascii "count.txt\0"
 	string: 
 		.ascii "Input a string up to 32 chars long: \0"
 	input: 
