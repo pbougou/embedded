@@ -1,6 +1,7 @@
 
 #ifndef _DRR_C_
 #define _DRR_C_
+#endif
 
 #include <stdio.h>
 #include "drr.h"
