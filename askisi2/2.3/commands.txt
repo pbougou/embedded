@@ -1,5 +1,0 @@
-gcc -Wall -c strcat.s strcpy.s strlen.s strcmp.s
-
-gcc -Wall -o string_manipulation string_manipulation.c strlen.o strc*.o
-
-./string_manipulation random_input
